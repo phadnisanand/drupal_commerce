@@ -1,0 +1,12 @@
+function custom_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  if ($form_state->getFormObject() instanceof \Drupal\Core\Entity\EntityFormInterface) {
+     $entity_type = $form_state->getFormObject()->getEntity()->getEntityTypeId();
+     if($entity_type == 'commerce_order_item' ) {
+
+      $product_id = $form_state->getFormObject()->getEntity()->getPurchasedEntity()->product_id->getString();
+     $entity_manager = \Drupal::entityTypeManager();
+     $product = $entity_manager->getStorage('commerce_product')->load($product_id);
+      $product_type = $product->bundle();
+      echo 'entity type- ' .$product_type; exit;
+     }
+  }
