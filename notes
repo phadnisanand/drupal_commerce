@@ -1,0 +1,48 @@
+https://metadrop.net/en/articles/drupal-8-commerce-2-create-order-programmatically
+https://www.drupaleasy.com/quicktips/drupal-8-getting-entity-id-formstate
+https://mglaman.dev/blog/programmatically-change-add-cart-line-item-type
+https://gist.github.com/jez500/4d1ef061e41f69a964732461cb0ec43a?permalink_comment_id=2924042
+
+https://www.drupal.org/project/commerce/issues/3189127
+https://github.com/drupalcommerce/commerce/blob/8.x-2.x/modules/cart/src/Form/AddToCartForm.php
+
+https://joehuggans.co.uk/article/drupal-8-commerce-2-create-custom-pane-upload-field
+https://antistatique.net/en/blog/how-to-setup-a-drupal-commerce-order-total-range-condition
+https://www.lilengine.co/articles/creating-checkout-pane-drupal-8-commerce
+https://www.agoradesign.at/blog/two-ways-ajaxify-and-decouple-drupal-commerce-add-cart-and-wishlist-actions
+
+https://drupal.stackexchange.com/questions/255319/how-to-get-the-product-id-on-hook-form-alter
+https://github.com/drugan/commerce_xquantity
+
+https://www.drupal.org/project/commerce_custom_product/issues/2465809
+https://drupalcommerce.org/questions/10511/get-array-value-product-variations
+
+https://www.drupaleasy.com/quicktips/drupal-8-getting-entity-id-formstate
+https://joehuggans.co.uk/article/drupal-8-commerce-2-create-custom-pane-upload-field
+
+$product_id = $form_state->getFormObject()->getEntity()->getValue('product_id');
+https://drupal.stackexchange.com/questions/255319/how-to-get-the-product-id-on-hook-form-alter
+
+
+https://www.youtube.com/watch?v=CycM1_onhEM&list=PLIubHPcZRORqBf2e8xsK6V0TxZ33wPvec
+https://joehuggans.co.uk/article/drupal-8-commerce-2-create-custom-pane-upload-field
+
+
+https://github.com/AcroMedia/orange_starter
+
+https://www.daymuse.com/blogs/product-types-drupal-commerce
+https://www.youtube.com/@Daymuse/playlists
+https://www.daymuse.com/blogs/customizable-products-drupal-guide
+
+https://drupalcommerce.org/videos/
+https://gist.github.com/DanLaufer/88dd75fd05b24a30643dc2fbfa5b8dee
+
+function custom_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  if ($form_state->getFormObject() instanceof \Drupal\Core\Entity\EntityFormInterface) {
+  $entity_type = $form_state->getFormObject()->getEntity()->getEntityTypeId();
+   // file_put_contents("output.txt", data);
+  echo 'entity type- ' .$entity_type; exit;
+}
+
+https://drupal-commerce.readthedocs.io/en/latest/v2/recipes/variations.html
+https://drupal.stackexchange.com/questions/146860/how-to-get-product-name-by-id-from-commerce-order
