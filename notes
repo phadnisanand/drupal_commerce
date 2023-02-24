@@ -46,3 +46,10 @@ function custom_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_st
 
 https://drupal-commerce.readthedocs.io/en/latest/v2/recipes/variations.html
 https://drupal.stackexchange.com/questions/146860/how-to-get-product-name-by-id-from-commerce-order
+
+
+https://www.drupal.org/docs/8/modules/commerce-cart-flyout/add-to-cart-form-theming
+https://www.drupal.org/forum/support/module-development-and-code-questions/2019-01-18/how-to-customize-the-add-to-cart
+https://drupal.stackexchange.com/questions/180382/how-to-customize-the-add-to-cart-form-using-hook-form-alter
+https://www.agoradesign.at/blog/using-add-cart-links-instead-forms-drupal-commerce-2
+https://drupallearning.com/add-custom-class-form-programmatically
