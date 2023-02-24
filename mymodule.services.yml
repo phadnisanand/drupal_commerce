@@ -1,0 +1,28 @@
+services:
+  mymodule.commerce_cart.cart_subscriber.decorator:
+    public: false
+    class: Drupal\mymodule\EventSubscriber\CartEventSubscriber
+    decorates: commerce_cart.cart_subscriber
+    decoration_priority: 5
+    arguments: ['@messenger', '@string_translation']
+
+  mymodule.commerce_log.cart_subscriber:
+    class: Drupal\mymodule\EventSubscriber\CartDeleteEventSubscriber
+    arguments: ['@messenger', '@string_translation']
+    tags:
+      - { name: event_subscriber }
+
+  mymodule.custom_price_resolver:
+    class: Drupal\mymodule\Resolver\CustomPriceResolver
+    tags:
+      - { name: commerce_price.price_resolver, priority: 100 }
+
+  mymodule.custom_tax_rate_resolver:
+    class: Drupal\mymodule\Resolver\CustomTaxRateResolver
+    tags:
+      - { name: commerce_tax.tax_rate_resolver, priority: 100 }
+
+  mymodule.bonus_order_processor:
+    class: Drupal\mymodule\OrderProcessor\BonusOrderProcessor
+    tags:
+      - { name: commerce_order.order_processor, priority: -300 }

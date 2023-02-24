@@ -1,0 +1,17 @@
+<?php
+/**
+ * Implements hook_theme().
+ */
+function mymodule_theme() {
+  $theme = [
+    'commerce_checkout_customer_comments' => [
+      'variables' => [
+        'test_data' => NULL,
+      ],
+    ],
+  ];
+
+  return $theme;
+}
+
+
